@@ -76,3 +76,69 @@ DRIFT-SENSE/
 ├── stress_test.py
 ├── compare_v3_v4.py
 └── test_v4_hardcase.py
+```
+Yes — this happens because your Markdown code block is not properly closed. GitHub is treating ## How to Run and ## Project Status as part of the code block instead of headings.
+
+Fix it exactly like this
+
+In your README.md, make sure the Project Structure section ends with three backticks:
+
+## Project Structure
+
+```text
+DRIFT-SENSE/
+├── data/
+├── results/
+├── generate_dataset.py
+├── localize.py
+├── localize_rotation.py
+├── localize_scale_rotation.py
+├── localize_v4.py
+├── evaluate.py
+├── stress_test.py
+├── compare_v3_v4.py
+├── test_v4_hardcase.py
+└── README.md
+```
+
+## How to Run
+
+Install dependencies:
+
+```bash
+pip install opencv-python numpy
+```
+
+Generate the dataset:
+
+```bash
+python generate_dataset.py
+```
+
+Run V4 localization:
+
+```bash
+python localize_v4.py
+```
+
+Run the hard-case test:
+
+```bash
+python test_v4_hardcase.py
+```
+
+Run V3 vs V4 comparison:
+
+```bash
+python compare_v3_v4.py
+```
+
+## Project Status
+
+**DRIFT-SENSE V4 — Completed**
+
+- 40/40 test cases successfully localized
+- Success rate: **100%**
+- Mean localization error: **0.36 pixels**
+- Maximum localization error: **1.41 pixels**
+- V4 improved from V3's **45%** success rate to **100%**
