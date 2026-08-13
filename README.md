@@ -95,3 +95,24 @@ At the bottom:
 **DRIFT-SENSE V4 — Completed**
 
 The V4 system achieved 100% success across the 40-case comparison evaluation with a mean localization error of 0.36 pixels.
+## How to Run
+
+Install dependencies:
+
+```bash
+pip install opencv-python numpy
+
+### 2. Add `Project Status`
+
+At the very bottom of the README, add:
+
+```markdown
+## Project Status
+
+**DRIFT-SENSE V4 — Completed**
+
+- 40/40 test cases successfully localized
+- Success rate: **100%**
+- Mean localization error: **0.36 pixels**
+- Maximum localization error: **1.41 pixels**
+- V4 improved from V3's **45%** success rate to **100%**
