@@ -34,10 +34,11 @@ This improves robustness compared with V3, which used a smaller search range.
 
 | Metric | V3 | V4 |
 |---|---:|---:|
-| Success Rate | 45.00% | 100.00% |
-| Mean Error | 24.98 px | 0.36 px |
-| Maximum Error | 131.10 px | 1.41 px |
-| Mean Confidence | 0.5105 | 0.9126 |
+| Success Rate | 45.00% | **100.00%** |
+| Mean Error | 24.98 px | **0.36 px** |
+| Median Error | 9.03 px | **0.00 px** |
+| Maximum Error | 131.10 px | **1.41 px** |
+| Mean Confidence | 0.5105 | **0.9126** |
 
 V4 successfully localized all 40 test cases, including difficult combinations of scale, rotation, noise, and blur.
 
