@@ -61,27 +61,9 @@ V4 successfully localized all 40 test cases, including difficult combinations of
 - Multi-Scale Search
 - Rotation-Aware Search
 
-## Project Structure
 
-```text
-DRIFT-SENSE/
-├── data/
-├── results/
-├── generate_dataset.py
-├── localize.py
-├── localize_rotation.py
-├── localize_scale_rotation.py
-├── localize_v4.py
-├── evaluate.py
-├── stress_test.py
-├── compare_v3_v4.py
-└── test_v4_hardcase.py
-```
-Yes — this happens because your Markdown code block is not properly closed. GitHub is treating ## How to Run and ## Project Status as part of the code block instead of headings.
 
-Fix it exactly like this
 
-In your README.md, make sure the Project Structure section ends with three backticks:
 
 ## Project Structure
 
