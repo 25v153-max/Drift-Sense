@@ -1,19 +1,23 @@
 # DRIFT-SENSE
 
 ### Scale and Rotation-Aware Target Localization for DRAM Images
+
 ## Overview
 
 DRIFT-SENSE is a computer-vision based localization system designed to detect and accurately localize target patterns in DRAM images under scale variation, rotation, noise, and blur.
+
 ## Problem
 
 Small target patterns in semiconductor/DRAM images can shift in position and appearance due to scale variation, rotation, noise, and image degradation. Conventional template matching may fail under these conditions.
+
 ## Solution
 
 DRIFT-SENSE uses multi-scale and rotation-aware template matching to locate the target and estimate its position, scale, and rotation.
 
-Pipeline:
+**Pipeline:**
 
 Image Generation → Preprocessing → Multi-Scale Search → Rotation Search → Template Matching → Localization → Error Evaluation
+
 ## V4 Approach
 
 V4 extends the localization search range to:
@@ -23,6 +27,7 @@ V4 extends the localization search range to:
 - Rotation step: 0.5°
 
 This improves robustness compared with V3, which used a smaller search range.
+
 ## Results
 
 ### V3 vs V4 — 40 Case Evaluation
@@ -35,15 +40,16 @@ This improves robustness compared with V3, which used a smaller search range.
 | Mean Confidence | 0.5105 | 0.9126 |
 
 V4 successfully localized all 40 test cases, including difficult combinations of scale, rotation, noise, and blur.
+
 ## Hard-Case Validation
 
-Target Size: 120 × 120  
-Rotation: +8°  
-Noise: 0  
-Blur: 5 × 5
+- Target Size: 120 × 120
+- Rotation: +8°
+- Noise: 0
+- Blur: 5 × 5
+- Localization Error: **0.00 pixels**
+- Confidence: **0.9367**
 
-Localization Error: **0.00 pixels**  
-Confidence: **0.9367**
 ## Technologies Used
 
 - Python
@@ -53,6 +59,7 @@ Confidence: **0.9367**
 - Template Matching
 - Multi-Scale Search
 - Rotation-Aware Search
+
 ## Project Structure
 
 ```text
@@ -68,51 +75,3 @@ DRIFT-SENSE/
 ├── stress_test.py
 ├── compare_v3_v4.py
 └── test_v4_hardcase.py
-
----
-
-## 11. Add how to run it
-
-Keep this simple:
-
-```markdown
-## How to Run
-
-Install the required Python libraries:
-
-```bash
-pip install opencv-python numpy
-
----
-
-## 12. Add your GitHub project status
-
-At the bottom:
-
-```markdown
-## Project Status
-
-**DRIFT-SENSE V4 — Completed**
-
-The V4 system achieved 100% success across the 40-case comparison evaluation with a mean localization error of 0.36 pixels.
-## How to Run
-
-Install dependencies:
-
-```bash
-pip install opencv-python numpy
-
-### 2. Add `Project Status`
-
-At the very bottom of the README, add:
-
-```markdown
-## Project Status
-
-**DRIFT-SENSE V4 — Completed**
-
-- 40/40 test cases successfully localized
-- Success rate: **100%**
-- Mean localization error: **0.36 pixels**
-- Maximum localization error: **1.41 pixels**
-- V4 improved from V3's **45%** success rate to **100%**
