@@ -1,0 +1,52 @@
+{
+    "dataset_name": "Drift-Sense Synthetic Dataset",
+    "dataset_version": "0.1",
+    "case_id": "001",
+    "architecture": "DRAM",
+    "reference_image": "reference_001.png",
+    "search_image": "search_001.png",
+    "image_type": "grayscale",
+    "reference_image_size": [
+        1000,
+        1000
+    ],
+    "search_image_size": [
+        1000,
+        1000
+    ],
+    "reference_magnification": "100x",
+    "search_magnification": "10x",
+    "nominal_scale_ratio": 10.0,
+    "nominal_target_size_in_search_pixels": [
+        100,
+        100
+    ],
+    "actual_target_size_in_search_pixels": [
+        105,
+        105
+    ],
+    "scale_variation_percent": 5.0,
+    "target_center": {
+        "x": 140,
+        "y": 739
+    },
+    "ground_truth": {
+        "x": 140,
+        "y": 739
+    },
+    "transformations": {
+        "nominal_scale_ratio": 10.0,
+        "actual_scale_ratio": 9.523809523809524,
+        "rotation_degrees": 3.0
+    },
+    "noise": {
+        "type": "Gaussian",
+        "sigma": 10.0,
+        "mean": 0.0
+    },
+    "random_seed": 42,
+    "debug_image": "search_001_debug.png",
+    "debug_marker": true,
+    "generator": "generate_dataset.py",
+    "generator_step": 7
+}
